@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="UWPLab3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPLab3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <SplitView Name="MySplitView" DisplayMode="CompactInline" 
+                   OpenPaneLength="100" 
+                   CompactPaneLength="6">
+            <SplitView.Content>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Content 1"/>
+                    <TextBlock Text="Content 2"/>
+                    <TextBlock Text="Content 2"/>
+                </StackPanel>
+            </SplitView.Content>
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Pane 1"/>
+                    <TextBlock Text="Pane 2"/>
+                    <TextBlock Text="Pane 2"/>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+        <Button Name="ShowHidePanel" 
+                Click="ShowHidePanel_Click"
+                FontSize="18" 
+                Content="Press me"/>
+    </Grid>
+</Page>
